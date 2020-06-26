@@ -22,7 +22,7 @@ url = "https://"+device_ip+"/api/common/1.0/oauth/token?Content-type=application
 
 
 #With access code create API request payload
-payload = 'grant_type=access_code&assertion='+access_code+'.&state=state_string'
+payload = 'grant_type=access_code&assertion=eyJhbGciOiJub25lIn0K.'+access_code+'.&state=state_string'
 
 #POST request... Verify false, is due to not trusting the self signed cert of the SteelHead
 response = requests.request("POST", url, data = payload,verify=False)
